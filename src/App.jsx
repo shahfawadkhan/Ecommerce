@@ -16,6 +16,7 @@ import '@mantine/notifications/styles.css';
 import Contact from './Pages/Contact';
 import SignUp from './Pages/SignUp';
 import ProductDetailPage from './Pages/ProductDetailsPage';
+import { Navigate } from 'react-router-dom';
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -25,18 +26,17 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes >
-      <Route path='/' element = {<Home />} />
-      <Route path='/favorite' element = {<Favorite />} />
-      <Route path='/cart' element = {<Cart />} />
-      <Route path='/products' element = {<FilteredProducts />} />
-      <Route path='/contact' element = {<Contact />} />
-      <Route path='/Signup/Login' element = {<SignUp />} />
-      <Route path="/product/:id" element={<ProductDetailPage />} />
-
+      <Routes>
+        <Route path="/Ecommerce" element={<Navigate to="/Ecommerce/home" replace />} />
+        <Route path='/Ecommerce/home' element={<Home />} />
+        <Route path='/Ecommerce/favorite' element={<Favorite />} />
+        <Route path='/Ecommerce/cart' element={<Cart />} />
+        <Route path='/Ecommerce/products' element={<FilteredProducts />} />
+        <Route path='/Ecommerce/contact' element={<Contact />} />
+        <Route path='/Ecommerce/Signup/Login' element={<SignUp />} />
+        <Route path="/Ecommerce/product/:id" element={<ProductDetailPage />} />
       </Routes>
       <Footer />
-      
     </>
   );
 }

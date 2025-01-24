@@ -43,7 +43,7 @@ const FeaturedProduct = () => {
         </div>
       ) : (
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-opacity duration-300 ${isSliding ? 'opacity-50' : 'opacity-100'}`}>
-          {products?.slice(32,40).map((product) => (
+          {products?.slice(22,30).map((product) => (
             <div
               key={product.id}
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
@@ -81,7 +81,7 @@ const FeaturedProduct = () => {
                   {product.title}
                 </h3>
                 <button
-                  onClick={() => navigate(`/product/${product.id}`)}
+                  onClick={() => navigate(`/Ecommerce/product/${product.id}`)}
                   className="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-green-600 transition-all duration-200 text-sm font-medium"
                 >
                   View Product

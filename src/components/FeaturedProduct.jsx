@@ -79,55 +79,55 @@ const FeaturedProduct = () => {
 
   return (
     <section className="max-w-7xl mx-auto py-6 px-4 mt-3">
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center space-x-4">
-  <h2 className="text-2xl font-bold text-gray-900 mr-4">Featured Products</h2>
-  <div className="flex items-center bg-gradient-to-r from-green-50 to-green-100 px-4 py-2 rounded-full shadow-md">
-    <div className="flex items-center space-x-2">
-      <div className="text-xs font-medium text-green-800 mr-2">Flash Sale</div>
-      <div className="flex items-center space-x-1">
-        <div className="bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold w-10 text-center">
-          {String(timeRemaining.hours).padStart(2, '0')}
+      <div className="flex items-center justify-between mb-8 max-sm:flex-col max-sm:space-y-2">
+  <div className="flex items-center space-x-4 max-sm:flex-col max-sm:space-x-0 max-sm:space-y-2 max-sm:items-start">
+    <h2 className="text-2xl font-bold text-gray-900 mr-4 max-sm:mr-0">Featured Products</h2>
+    <div className="flex items-center bg-gradient-to-r from-green-50 to-green-100 px-4 py-2 rounded-full shadow-md max-sm:w-full max-sm:justify-between">
+      <div className="flex items-center space-x-2 max-sm:flex-col max-sm:space-x-0 max-sm:space-y-1 max-sm:w-full max-sm:items-center">
+        <div className="text-xs font-medium text-green-800 mr-2 max-sm:mr-0">Flash Sale</div>
+        <div className="flex items-center space-x-1 max-sm:space-x-2">
+          <div className="bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold w-10 text-center">
+            {String(timeRemaining.hours).padStart(2, '0')}
+          </div>
+          <span className="text-green-600 font-bold max-sm:hidden">:</span>
+          <div className="bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold w-10 text-center">
+            {String(timeRemaining.minutes).padStart(2, '0')}
+          </div>
+          <span className="text-green-600 font-bold max-sm:hidden">:</span>
+          <div className="bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold w-10 text-center">
+            {String(timeRemaining.seconds).padStart(2, '0')}
+          </div>
         </div>
-        <span className="text-green-600 font-bold">:</span>
-        <div className="bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold w-10 text-center">
-          {String(timeRemaining.minutes).padStart(2, '0')}
-        </div>
-        <span className="text-green-600 font-bold">:</span>
-        <div className="bg-green-600 text-white px-2 py-1 rounded-md text-sm font-bold w-10 text-center">
-          {String(timeRemaining.seconds).padStart(2, '0')}
-        </div>
+        <div className="text-xs text-green-700 ml-2 max-sm:ml-0">Ends Soon</div>
       </div>
-      <div className="text-xs text-green-700 ml-2">Ends Soon</div>
     </div>
   </div>
-</div>
 
-        <div className="flex gap-3">
-          <button
-            onClick={handlePrev}
-            disabled={startIndex === 0}
-            className={`transition-all duration-300 p-3 rounded-full shadow-lg ${
-              startIndex === 0
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-white text-green-600 hover:bg-green-600 hover:text-white hover:scale-110"
-            }`}
-          >
-            <FaChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={handleNext}
-            disabled={startIndex + productsToShow >= (products?.length || 0)}
-            className={`transition-all duration-300 p-3 rounded-full shadow-lg ${
-              startIndex + productsToShow >= (products?.length || 0)
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-white text-green-600 hover:bg-green-600 hover:text-white hover:scale-110"
-            }`}
-          >
-            <FaChevronRight className="w-6 h-6" />
-          </button>
-        </div>
-      </div>
+  <div className="flex gap-3">
+    <button
+      onClick={handlePrev}
+      disabled={startIndex === 0}
+      className={`transition-all duration-300 p-3 rounded-full shadow-lg ${
+        startIndex === 0
+          ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+          : "bg-white text-green-600 hover:bg-green-600 hover:text-white hover:scale-110"
+      }`}
+    >
+      <FaChevronLeft className="w-6 h-6" />
+    </button>
+    <button
+      onClick={handleNext}
+      disabled={startIndex + productsToShow >= (products?.length || 0)}
+      className={`transition-all duration-300 p-3 rounded-full shadow-lg ${
+        startIndex + productsToShow >= (products?.length || 0)
+          ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+          : "bg-white text-green-600 hover:bg-green-600 hover:text-white hover:scale-110"
+      }`}
+    >
+      <FaChevronRight className="w-6 h-6" />
+    </button>
+  </div>
+</div>
 
       {isLoading ? (
         <div className="flex justify-center items-center h-32">
@@ -173,7 +173,7 @@ const FeaturedProduct = () => {
                   {product.title}
                 </h3>
                 <button
-                  onClick={() => navigate(`/product/${product.id}`)}
+                  onClick={() => navigate(`/Ecommerce/product/${product.id}`)}
                   className="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-green-600 transition-all duration-200 text-sm font-medium"
                 >
                   View Product

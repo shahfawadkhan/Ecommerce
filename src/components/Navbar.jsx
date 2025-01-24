@@ -31,7 +31,7 @@ function Navbar() {
           ShopNow          </h1>
 
           <ul className="hidden lg:flex gap-8 items-center text-gray-800">
-            <NavLink to={"/"} className={navLinkStyle}>
+            <NavLink to={"/Ecommerce/home"} className={navLinkStyle}>
               {({ isActive }) => (
                 <>
                   <span>Home</span>
@@ -39,7 +39,7 @@ function Navbar() {
                 </>
               )}
             </NavLink>
-            <NavLink to={"/contact"} className={navLinkStyle}>
+            <NavLink to={"/Ecommerce/contact"} className={navLinkStyle}>
               {({ isActive }) => (
                 <>
                   <span>Contact</span>
@@ -47,7 +47,7 @@ function Navbar() {
                 </>
               )}
             </NavLink>
-            <NavLink to={"/products"} className={navLinkStyle}>
+            <NavLink to={"/Ecommerce/products"} className={navLinkStyle}>
               {({ isActive }) => (
                 <>
                   <span>Products</span>
@@ -55,7 +55,7 @@ function Navbar() {
                 </>
               )}
             </NavLink>
-            <NavLink to={"/Signup/Login"} className={navLinkStyle}>
+            <NavLink to={"/Ecommerce/Signup/Login"} className={navLinkStyle}>
               {({ isActive }) => (
                 <>
                   <span>Sign Up</span>
@@ -75,7 +75,7 @@ function Navbar() {
               <AiOutlineSearch className="w-5 h-5 text-gray-400 group-hover:text-gray-600 cursor-pointer transition-colors duration-300" />
             </div>
             <div className="flex gap-6">
-              <Link to={"favorite"}>
+              <Link to={"/Ecommerce/favorite"}>
                 <div className="relative group">
                   <AiOutlineHeart 
                     className="w-6 h-6 cursor-pointer text-gray-700 hover:text-green-600 transition-all duration-300 transform group-hover:scale-110"
@@ -85,7 +85,7 @@ function Navbar() {
                   </span>
                 </div>
               </Link>
-              <Link to={"cart"}>
+              <Link to={"/Ecommerce/cart"}>
                 <div className="relative group">
                   <AiOutlineShoppingCart 
                     className="w-6 h-6 cursor-pointer text-gray-700 hover:text-green-600 transition-all duration-300 transform group-hover:scale-110"
