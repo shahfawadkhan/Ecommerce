@@ -28,12 +28,12 @@ function SignUp() {
   };
 
   return (
-    <div className="h-[90vh] bg-gray-50 flex flex-col md:flex-row items-center mb-16 m-8  rounded-2xl">
-      <div className="md:w-1/2 h-[90vh] bg-gray-900 hidden md:flex items-center justify-center p-5 rounded-l-2xl">
+    <div className="h-[90vh] bg-gray-50 flex flex-col md:flex-row items-center mb-16 m-8 rounded-2xl max-w-5xl mx-auto">
+      <div className="md:w-1/2 h-[70vh] bg-gray-900 hidden md:flex items-center justify-center p-5 rounded-l-2xl">
         <img 
           src={Image2}
           alt="Authentication" 
-          className="max-w-[300px] w-full h-auto object-contain rounded-2xl"
+          className="max-w-full max-h-full object-contain rounded-2xl"
         />
       </div>
 
