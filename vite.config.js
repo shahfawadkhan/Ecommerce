@@ -4,5 +4,5 @@ import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
   plugins: [react(), ghPages()],
-  base: 'Ecommerce', // Replace with your GitHub repo name
+  base: '/Ecommerce/', // Replace with your GitHub repo name
 });

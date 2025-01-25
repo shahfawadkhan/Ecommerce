@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found</title>
+    <title>404 - Redirecting...</title>
   </head>
   <body>
     <script>
-      window.location.replace(window.location.pathname + "/#");
+      // Redirect to index.html and let React handle routing
+      window.location.href = "/Ecommerce/#" + window.location.pathname;
     </script>
   </body>
 </html>
