@@ -13,7 +13,7 @@ const FeaturedProduct = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { isLoading, products } = useSelector((state) => state.products);
-  const [startIndex, setStartIndex] = useState(2);
+  const [startIndex, setStartIndex] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState({
     hours: 24,
     minutes: 0,

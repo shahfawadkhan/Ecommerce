@@ -5,6 +5,7 @@ import { toggleCart } from "../Slices/CartSlice";
 import { toggleFavorite } from "../Slices/FavoriteSlice";
 import { toast } from "react-toastify";
 import { Navigate, useNavigate } from "react-router-dom";
+import { incrementCart , incrementFav } from "../Slices/ProductSlice";
 
 const FeaturedProduct = () => {
   const navigate = useNavigate()
@@ -16,11 +17,13 @@ const FeaturedProduct = () => {
 
   const handleFavorite = (data) => {
     dispatch(toggleFavorite(data));
+    dispatch(incrementFav())
     toast.success(`${data.title} added to favorites`);
   };
 
   const handleAddToCart = (data) => {
     dispatch(toggleCart(data));
+    dispatch(incrementCart())
     toast.success(`${data.title} added to cart`);
   };
 
